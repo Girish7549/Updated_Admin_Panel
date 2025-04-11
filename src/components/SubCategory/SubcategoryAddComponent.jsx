@@ -17,7 +17,7 @@ function SubcategoryAddComponent() {
   const fetchData = async () => {
     try {
       const response = await axiosClients.get('/getAllCategories');
-      setData(response.data);
+      setData(response.data.data);
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {
