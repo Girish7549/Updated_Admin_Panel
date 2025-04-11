@@ -15,7 +15,7 @@ function EditSubjectModal({ show, handleClose, data, onSave }) {
   const fetchData = async () => {
     try {
       const response = await axiosClients.get('/getAllSubcategory');
-      setSubcategory(response.data);
+      setSubcategory(response.data.data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
